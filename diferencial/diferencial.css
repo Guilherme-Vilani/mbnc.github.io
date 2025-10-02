@@ -1,0 +1,132 @@
+/* Base */
+* {
+  background-color: #000070;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Grid superior */
+.diferencial-div-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto 30px auto;
+}
+
+/* Quadrado superior dentro do front do flip */
+.diferencial-quadrado-superior {
+  background-color: #3c7b2f;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  height: 250px;
+  justify-content: center;
+}
+
+/* Grid inferior */
+.diferencial-container-grid-diferencial {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.diferencial-container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 80%;
+}
+
+/* Cartões flip */
+.diferencial-flip-container {
+  perspective: 1000px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.diferencial-flipper {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.diferencial-flip-container:hover .diferencial-flipper {
+  transform: rotateX(180deg);
+}
+
+.diferencial-front,
+.diferencial-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.diferencial-front {
+  background-color: #3c7b2f;
+  color: black;
+  transform: rotateX(0deg);
+}
+
+.diferencial-back {
+  background-color: green;
+  color: white;
+  transform: rotateX(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Cartões inferiores */
+.diferencial-quadrado-1,
+.flip-container {
+  height: 200px;
+  width: 100%;
+}
+
+.diferencial-quadrado-1 {
+  background-color: #3c7b2f;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagens e textos */
+.diferencial-imagem-superior {
+  background-color: transparent;
+  width: 150px;
+}
+
+.diferencial-imagem {
+  background-color: transparent;
+  width: 100px;
+}
+
+.diferencial-texto {
+  color: #000070;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.diferencial-div-imagem {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
